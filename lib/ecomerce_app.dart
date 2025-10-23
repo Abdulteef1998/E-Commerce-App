@@ -1,3 +1,5 @@
+import 'package:ecomerce_app/core/routing/app_router.dart';
+import 'package:ecomerce_app/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,6 +16,8 @@ class EcommerceApp extends StatelessWidget {
 
       builder: (_, child) {
         return MaterialApp(
+          initialRoute: Routes.login,
+          onGenerateRoute: AppRouter.onGenerateRoute,
           debugShowCheckedModeBanner: false,
           title: 'Ecommerce App',
 
