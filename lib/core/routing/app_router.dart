@@ -1,5 +1,6 @@
 import 'package:ecomerce_app/core/routing/routes.dart';
 import 'package:ecomerce_app/features/auth/ui/screens/login_screen.dart';
+import 'package:ecomerce_app/features/auth/ui/screens/otp_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -7,6 +8,8 @@ class AppRouter {
     switch (settings.name) {
       case Routes.login:
         return MaterialPageRoute(builder: (_) => LoginScreen());
+      case Routes.otp:
+        return MaterialPageRoute(builder: (_) => OtpScreen());
     }
     return null;
   }

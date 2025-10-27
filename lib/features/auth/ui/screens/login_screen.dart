@@ -1,4 +1,5 @@
 import 'package:ecomerce_app/core/helpers/extensions.dart';
+import 'package:ecomerce_app/core/routing/routes.dart';
 import 'package:ecomerce_app/core/theme/app_colors.dart';
 import 'package:ecomerce_app/core/theme/app_text_style.dart';
 import 'package:ecomerce_app/core/widgets/app_button.dart';
@@ -46,7 +47,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 hintText: '(+20)  ______________',
               ),
               104.height,
-              AppButton(text: 'Login'),
+              AppButton(
+                text: 'Login',
+                onPressed: () {
+                  Navigator.pushNamed(context, Routes.otp);
+                },
+              ),
             ],
           ),
         ),
