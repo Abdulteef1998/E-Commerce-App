@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:ecomerce_app/core/helpers/extensions.dart';
 import 'package:ecomerce_app/core/routing/routes.dart';
 import 'package:ecomerce_app/core/theme/app_colors.dart';
 import 'package:ecomerce_app/core/theme/app_text_style.dart';
 import 'package:ecomerce_app/core/widgets/app_button.dart';
 import 'package:ecomerce_app/core/widgets/app_text_form_field.dart';
+import 'package:ecomerce_app/features/auth/ui/widgets/lang_icon.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -29,18 +31,20 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Login', style: AppTextStyle.font24W700),
+              LangIcon(),
+              15.height,
+              Text("loginTitle".tr(), style: AppTextStyle.font24W700),
               23.height,
-              Text('Welcome back', style: AppTextStyle.font20W700),
+              Text('welcomeBack'.tr(), style: AppTextStyle.font20W700),
               8.height,
               Text(
-                'To keep connected with us please login to your account',
+                'loginSubtitle'.tr(),
                 style: AppTextStyle.font14W700.copyWith(
                   color: AppColor.blackColor.withValues(alpha: 0.78),
                 ),
               ),
               35.height,
-              Text('Phone Number', style: AppTextStyle.font15W700),
+              Text('phoneNumberLabel'.tr(), style: AppTextStyle.font15W700),
               8.height,
               AppTextFormField(
                 controller: _phoneController,
@@ -48,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               104.height,
               AppButton(
-                text: 'Login',
+                text: 'loginButton'.tr(),
                 onPressed: () {
                   Navigator.pushNamed(context, Routes.otp);
                 },
