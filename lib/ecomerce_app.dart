@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:ecomerce_app/core/routing/app_router.dart';
 import 'package:ecomerce_app/core/routing/routes.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,9 @@ class EcommerceApp extends StatelessWidget {
 
       builder: (_, child) {
         return MaterialApp(
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
           initialRoute: Routes.login,
           onGenerateRoute: AppRouter.onGenerateRoute,
           debugShowCheckedModeBanner: false,
