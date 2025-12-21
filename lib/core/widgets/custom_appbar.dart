@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:ecomerce_app/core/helpers/extensions.dart';
 import 'package:ecomerce_app/core/theme/app_colors.dart';
 import 'package:ecomerce_app/core/theme/app_text_style.dart';
@@ -20,7 +21,9 @@ class CustomAppBar extends StatelessWidget {
                   side: BorderSide(color: AppColor.greyColor.withAlpha(90)),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               icon: const Icon(Icons.arrow_back),
             ),
           ],
@@ -32,7 +35,7 @@ class CustomAppBar extends StatelessWidget {
           top: 0,
           child: Center(
             child: Text(
-              'Otp Verification',
+              'otpVerificationTitle'.tr(),
               style: AppTextStyle.font24W700,
               textAlign: TextAlign.center,
             ),

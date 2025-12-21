@@ -1,8 +1,13 @@
 {
-  "@@locale": "ar",
+  
   "loginTitle": "تسجيل الدخول",
   "welcomeBack": "مرحبًا بعودتك",
   "loginSubtitle": "للبقاء على اتصال معنا، يرجى تسجيل الدخول إلى حسابك",
   "phoneNumberLabel": "رقم الهاتف",
-  "loginButton": "تسجيل الدخول"
+  "loginButton": "تسجيل الدخول",
+    "otpVerificationTitle": "التحقق من الرمز",
+  "otpInstruction": "الرجاء إدخال الرمز المكون من 4 أرقام المرسل إلى بريدك الإلكتروني",
+  "verifyButton": "تحقق",
+  "resend_code": "إعادة إرسال الرمز"
+  
 }

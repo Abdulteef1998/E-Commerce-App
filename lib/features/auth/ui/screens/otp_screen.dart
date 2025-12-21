@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:ecomerce_app/core/helpers/extensions.dart';
 import 'package:ecomerce_app/core/theme/app_colors.dart';
 import 'package:ecomerce_app/core/theme/app_text_style.dart';
@@ -6,6 +7,7 @@ import 'package:ecomerce_app/core/widgets/app_padding.dart';
 import 'package:ecomerce_app/core/widgets/custom_appbar.dart';
 import 'package:ecomerce_app/features/auth/ui/widgets/otp_formfield.dart';
 import 'package:ecomerce_app/features/auth/ui/widgets/resend_code_widget.dart';
+import 'package:ecomerce_app/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 
 class OtpScreen extends StatelessWidget {
@@ -22,7 +24,7 @@ class OtpScreen extends StatelessWidget {
               CustomAppBar(),
               42.height,
               Text(
-                'Please enter 4 digit code sent to your email',
+                LocaleKeys.otpInstruction.tr(),
                 style: AppTextStyle.font16W700.copyWith(
                   color: AppColor.blackColor.withValues(alpha: 0.7),
                 ),
@@ -32,7 +34,7 @@ class OtpScreen extends StatelessWidget {
               16.height,
               ResendCodeWidget(),
               82.height,
-              AppButton(text: 'Verify', onPressed: () {}),
+              AppButton(text: LocaleKeys.verifyButton.tr(), onPressed: () {}),
             ],
           ),
         ),

@@ -1,8 +1,12 @@
 {
-  "@@locale": "en",
+  
   "loginTitle": "Login",
   "welcomeBack": "Welcome back",
   "loginSubtitle": "To keep connected with us please login to your account",
   "phoneNumberLabel": "Phone Number",
-  "loginButton": "Login"
+  "loginButton": "Login",
+   "otpVerificationTitle": "OTP Verification",
+   "otpInstructin": "Please enter 4 digit code sent to your email",
+  "verifyButton": "Verify",
+  "resend_code": "Resend Code"
 }
