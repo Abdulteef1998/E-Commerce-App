@@ -25,7 +25,7 @@ class OtpScreen extends StatelessWidget {
               42.height,
               Text(
                 LocaleKeys.otpInstruction.tr(),
-                style: AppTextStyle.font16W700.copyWith(
+                style: AppTextStyle.font12W700.copyWith(
                   color: AppColor.blackColor.withValues(alpha: 0.7),
                 ),
               ),

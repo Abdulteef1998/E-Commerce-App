@@ -46,15 +46,22 @@ class AppTextFormField extends StatelessWidget {
         readOnly: readOnly,
         validator: validator,
 
+        // 1. هنا الحل: هذا السطر يحدد شكل ولون النص الذي يكتبه المستخدم
+        style: AppTextStyle.font13W500.copyWith(color: Colors.black),
+
         decoration: InputDecoration(
           labelText: labelText,
           hintText: hintText,
           filled: true,
-          hintStyle: AppTextStyle.font13W500,
+          hintStyle: AppTextStyle.font13W500.copyWith(
+            color: AppColor.greyColor,
+          ),
           labelStyle: AppTextStyle.font13W500,
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
           fillColor: AppColor.whiteColor,
+
+          // إزالة الحدود الافتراضية لجعل الظل (Shadow) يبدو أجمل
           enabledBorder: _buildOutLineInputBorder(
             borderColor: Colors.transparent,
           ),
@@ -62,6 +69,7 @@ class AppTextFormField extends StatelessWidget {
             borderColor: AppColor.mainColor,
           ),
           errorBorder: _buildOutLineInputBorder(borderColor: Colors.red),
+          focusedErrorBorder: _buildOutLineInputBorder(borderColor: Colors.red),
         ),
       ),
     );
@@ -70,7 +78,7 @@ class AppTextFormField extends StatelessWidget {
   OutlineInputBorder _buildOutLineInputBorder({required Color borderColor}) {
     return OutlineInputBorder(
       borderRadius: 10.radius,
-      borderSide: BorderSide(color: borderColor),
+      borderSide: BorderSide(color: borderColor, width: 1.3),
     );
   }
 }

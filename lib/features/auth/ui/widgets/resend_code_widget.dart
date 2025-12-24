@@ -13,7 +13,7 @@ class ResendCodeWidget extends StatelessWidget {
       child: InkWell(
         child: Text(
           LocaleKeys.resend_code.tr(),
-          style: AppTextStyle.font12W400,
+          style: AppTextStyle.font12W500,
         ),
       ),
     );
